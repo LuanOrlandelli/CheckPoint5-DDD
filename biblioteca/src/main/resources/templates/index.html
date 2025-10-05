@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Comunitária</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4c6ef5, #15aabf);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background-color: #ffffffcc;
+            color: #333;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .btn-custom {
+            background-color: #4c6ef5;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #364fc7;
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <h1 class="mb-5">📚 Biblioteca Comunitária</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-3 mb-3">
+            <div class="card p-4">
+                <h4>📖 Livros</h4>
+                <p>Gerencie o acervo da biblioteca.</p>
+                <a th:href="@{/livros}" class="btn btn-custom">Acessar</a>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card p-4">
+                <h4>👤 Usuários</h4>
+                <p>Cadastre e visualize usuários.</p>
+                <a th:href="@{/usuarios}" class="btn btn-custom">Acessar</a>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card p-4">
+                <h4>🔄 Empréstimos</h4>
+                <p>Controle retiradas e devoluções.</p>
+                <a th:href="@{/emprestimos}" class="btn btn-custom">Acessar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
